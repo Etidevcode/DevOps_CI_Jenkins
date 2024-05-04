@@ -1,0 +1,30 @@
+$ ssh-keygen.exe
+
+$ ssh-keygen.exe
+
+$ ls ~/.ssh/
+
+$ cat ~/.ssh/id_rsa.pub
+
+$ mkdir -p gitrepos
+
+$ git clone git@github.com:Etidevcode/jenkinstriggers.git
+
+$ cd gitrepos/
+
+
+$ cd jenkinstriggers/
+
+$ mv Jenkinsfile.groovy Jenkinsfile
+
+$ ls
+Jenkinsfile
+
+$ git add .
+
+$ git commit -m "first commit"
+
+$ git push -u origin main
+
+
+

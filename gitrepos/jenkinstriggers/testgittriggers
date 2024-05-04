@@ -1,0 +1,36 @@
+JOB URL
+==
+
+http://54.85.138.26:8080/job/Build/build?token=mybuildtoken
+
+
+TOKEN
+==
+
+admin:1165a18801ed24ea84c437eb79e3123b1b
+
+CRUMB
+==
+
+curl -s --user admin:admin123 'http://54.85.138.26:8080/crumbIssuer/api/xml?xpath=concat(//crumbRequestField,":",//crumb)'
+
+Jenkins-Crumb:0d874f38599f7965be530d9635963338761e89ce495db63cc38ec41033c251dd
+
+---
+
+curl -I -X POST http://admin:1165a18801ed24ea84c437eb79e3123b1b@54.85.138.26:8080/job/Build/build?token=mybuildtoken -H "Jenkins-Crumb:0d874f38599f7965be530d9635963338761e89ce495db63cc38ec41033c251dd"
+
+---
+
+HTTP/1.1 201 Created
+
+Date: Fri, 03 May 2024 17:03:39 GMT
+
+X-Content-Type-Options: nosniff
+
+Location: http://54.85.138.26:8080/queue/item/128/
+
+Content-Length: 0
+
+Server: Jetty(10.0.20)
+
